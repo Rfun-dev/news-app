@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/listNewsFragment">
+
+    <fragment
+        android:id="@+id/listNewsFragment"
+        android:name="com.elearning.rekamiacademy.ui.view.dashboard.ListNewsFragment"
+        android:label="fragment_list_news"
+        tools:layout="@layout/fragment_list_news" >
+        <action
+            android:id="@+id/action_listNewsFragment_to_favoriteFragment"
+            app:destination="@id/favoriteFragment" />
+        <action
+            android:id="@+id/action_listNewsFragment_to_detailFragment"
+            app:destination="@id/detailFragment"/>
+        <action
+            android:id="@+id/action_listNewsFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.elearning.rekamiacademy.ui.view.detail.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" >
+        <action
+            android:id="@+id/action_detailFragment_to_listNewsFragment"
+            app:destination="@id/listNewsFragment" />
+        <argument
+            android:name="id"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <action
+            android:id="@+id/action_detailFragment_to_favoriteFragment2"
+            app:destination="@id/favoriteFragment" />
+        <argument
+            android:name="isFavorite"
+            app:argType="boolean"
+            android:defaultValue="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.elearning.rekamiacademy.ui.view.favorite.FavoriteFragment"
+        android:label="fragment_favorite"
+        tools:layout="@layout/fragment_favorite" >
+        <action
+            android:id="@+id/action_favoriteFragment_to_listNewsFragment"
+            app:destination="@id/listNewsFragment" />
+        <action
+            android:id="@+id/action_favoriteFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.elearning.rekamiacademy.ui.view.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_listNewsFragment"
+            app:destination="@id/listNewsFragment" />
+    </fragment>
+</navigation>

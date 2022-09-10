@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.view.detail.DetailFragment">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/btn_favorite_back"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:src="@drawable/back_button" />
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/img_image_url"
+        android:layout_width="0dp"
+        android:layout_height="262dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/ic_launcher_background"
+        tools:src="@tools:sample/avatars" />
+
+    <ImageButton
+        android:id="@+id/btn_save"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="24dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/unsave_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="210dp"
+        android:src="@drawable/backgroudn_detail"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="43dp"
+        android:fontFamily="@font/quicksand_bold"
+        android:text="Warisan Kebebasan Pers Era Trump Tuai Rekor, 274 Wartawan Dipenjara Sepanjang Tahun 2020"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView8" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="11dp"
+        android:layout_height="11dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ballpoint"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+    <TextView
+        android:id="@+id/tv_writer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/quicksand_semibold"
+        android:text="Erfan Ferdianto"
+        android:textSize="10dp"
+        app:layout_constraintStart_toEndOf="@+id/imageView10"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+    <TextView
+        android:id="@+id/tv_hours"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/quicksand_semibold"
+        android:text="3 hours ago"
+        android:textColor="#60000000"
+        android:textSize="10dp"
+        app:layout_constraintStart_toEndOf="@+id/imageView11"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="11dp"
+        android:layout_height="11dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/clock"
+        app:layout_constraintStart_toEndOf="@+id/tv_writer"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:contentDescription="@string/app_name"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView11">
+
+        <TextView
+            android:id="@+id/tv_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/quicksand_regular"
+            android:lineHeight="18dp"
+            android:text="Sedikitnya 274 wartawan dijebloskan ke penjara hingga 1 Desember,  tertinggi sejak kelompok yang bermarkas di New York itu mulai mengumpulkan data pada awal 1990an, menurut laporan. Angka itu naik dari sedikitnya 250 wartawan tahun lalu. Ketegangan politik dan aksi protes menyebabkan banyak penangkapan, dengan sebagian besar terjadi di Tiongkok, Turki, Mesir dan Arab Saudi, katanya. Di tengah pandemi Covid-19, para pemimpin otoriter berupaya mengendalikan pemberitaan dengan menangkap para wartawan.  Setidaknya dua wartawan meninggal usai terinfeksi penyakit di balik jeruji besi, menurut laporan tersebut. Laporan itu menyalahkan kurangnya kepemimpinan global terhadap nilai-nilai demokrasi, dan apalagi serangan terhadap media oleh Presiden AS Donald Trump, yang dikabarkan memberi perlindungan kepada otoritas untuk menindak para wartawan di negara mereka sendiri. Secara global 34 wartawan dibui karena &quot;berita hoaks&quot; sepanjang 2020, dibanding 31 wartawan tahun lalu, katanya.  "
+            android:textColor="@color/black"
+            android:textSize="10sp" />
+    </androidx.core.widget.NestedScrollView>
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/shimmer"
+            layout="@layout/shammer_fragment_detail" />
+    </com.facebook.shimmer.ShimmerFrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
